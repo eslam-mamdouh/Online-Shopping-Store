@@ -29,10 +29,15 @@ namespace OnlineShoping
         public void btn_sign_Click(object sender, EventArgs e)
         {
             
-            NewUser.username = ProName.Text;
-            NewUser.pass = ProPrice.Text;
+            /*NewUser.username = ProName.Text;
+            NewUser.pass = ProPrice.Text;*/
+            Users one = new Users();
+            one.name = UserName.Text;
+            one.password = UserPass.Text;
+            LinkedList<object> storage = new LinkedList<object>();
+            storage.AddFirst(one);
             this.Close();
-            Login log = new Login(NewUser);
+            Login log = new Login(one);
             log.Show();
         }
 

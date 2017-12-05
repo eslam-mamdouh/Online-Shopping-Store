@@ -62,13 +62,18 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainContainer.Designer.cs">
+      <DependentUpon>MainContainer.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NewProduct.Designer.cs">
       <DependentUpon>NewProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewProductClass.cs" />
     <Compile Include="ProductContainer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -108,6 +113,7 @@
     <Compile Include="UserByAdmin.Designer.cs">
       <DependentUpon>UserByAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users.cs" />
     <EmbeddedResource Include="CartManagement.resx">
       <DependentUpon>CartManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainContainer.resx">
+      <DependentUpon>MainContainer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewProduct.resx">
       <DependentUpon>NewProduct.cs</DependentUpon>

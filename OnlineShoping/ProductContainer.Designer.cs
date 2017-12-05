@@ -104,7 +104,7 @@
             this.Controls.Add(this.NproDis);
             this.Controls.Add(this.NProImg);
             this.Controls.Add(this.NProName);
-            this.Margin = new System.Windows.Forms.Padding(12);
+            this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "ProductContainer";
             this.Size = new System.Drawing.Size(211, 287);
             this.Load += new System.EventHandler(this.ProductContainer_Load);

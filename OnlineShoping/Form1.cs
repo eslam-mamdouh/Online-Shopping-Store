@@ -13,19 +13,74 @@ namespace OnlineShoping
 {
     public partial class Form1 : Form
     {
+        LinkedList<ProductContainer> StoragePro;
+       // private ProductContainer NPro;
+
         public Form1()
         {
             InitializeComponent();
+            /*ProductContainer pro1 = new ProductContainer();
+            pro1.name = "Eslam";
+            pro1.price = 530;
+            pro1.disc = "Esla  smnadb damb jhsajc jhsakf fksajfiw jyw iwfhwe voidue b";
+            flowLayoutPanel1.Controls.Add(pro1);
+            ProductContainer pro2 = new ProductContainer();
+            pro2.name = "smsm";
+            pro2.price = 530;
+            pro2.disc = "Esla  smnadb ;slv';d.s'v.d's ,;lsmdkfvnks jhsajc jhsakf fksajfiw jyw iwfhwe voidue b";
+            flowLayoutPanel1.Controls.Add(pro2);
 
-            for(int i = 0 ; i<7 ; i++)
+            /*try
             {
-                flowLayoutPanel1.Controls.Add(new ProductContainer());
+                var current = StoragePro.First.Next;
+                while (current != null)
+                {
+
+                    flowLayoutPanel1.Controls.Add(current.Value);
+                }
             }
+            catch(Exception exx)
+            {
+                MessageBox.Show(exx.Message);
+            }
+           /* for(int i = 0 ; i<7 ; i++)
+            {
+                ProductContainer pro = new ProductContainer();
+                
+                flowLayoutPanel1.Controls.Add(pro);
+            }*/
       
+        }
+       
+
+        public Form1(LinkedList<ProductContainer> StoragePro)
+        {
+            InitializeComponent();
+            this.StoragePro = StoragePro;
+            var current = StoragePro.First;
+            while(current != null)
+            {
+                ProductContainer pro = new ProductContainer();
+                pro.name = current.Value.name;
+                pro.disc = current.Value.disc;
+                pro.price = current.Value.price;
+                flowLayoutPanel1.Controls.Add(pro);
+                current = current.Next;
+            }
+        }
+        //ProductContainer Npro = new ProductContainer();
+        public Form1(ProductContainer NPro)
+        {
+            InitializeComponent();
+            // TODO: Complete member 
+            flowLayoutPanel1.Controls.Add(NPro);
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+
 
         }
 
@@ -103,7 +158,7 @@ namespace OnlineShoping
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             UserByAdmin nuser = new UserByAdmin();
             nuser.Show();
         }
@@ -111,6 +166,11 @@ namespace OnlineShoping
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+
+        }
+
+        private void flowLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
 
         }
 

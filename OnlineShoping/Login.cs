@@ -13,7 +13,7 @@ namespace OnlineShoping
 {
     public partial class Login : Form
     {
-        SignUpClass NewUser = new SignUpClass();
+        Users NewUser = new Users();
        
         public Login()
         {
@@ -21,7 +21,7 @@ namespace OnlineShoping
             
         }
 
-        public Login(SignUpClass NewUser)
+        public Login(Users NewUser)
         {
             InitializeComponent();
             this.NewUser = NewUser;
@@ -48,7 +48,13 @@ namespace OnlineShoping
 
         public void btn_login_Click(object sender, EventArgs e)
         {
-            if(UserName.Text == NewUser.username && Password.Text == NewUser.pass )
+            if(UserName.Text ==NewUser.name  && Password.Text == NewUser.password )
+            {
+                this.Hide();
+                Form1 main = new Form1();
+                main.Show();
+            }
+            if (UserName.Text == "1" && Password.Text == "1")
             {
                 this.Hide();
                 Form1 main = new Form1();

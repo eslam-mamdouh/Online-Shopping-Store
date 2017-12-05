@@ -35,8 +35,8 @@
             this.btn_sign = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ProPrice = new System.Windows.Forms.TextBox();
-            this.ProName = new System.Windows.Forms.TextBox();
+            this.UserPass = new System.Windows.Forms.TextBox();
+            this.UserName = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -110,19 +110,19 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "User Name : ";
             // 
-            // ProPrice
+            // UserPass
             // 
-            this.ProPrice.Location = new System.Drawing.Point(219, 128);
-            this.ProPrice.Name = "ProPrice";
-            this.ProPrice.Size = new System.Drawing.Size(171, 20);
-            this.ProPrice.TabIndex = 21;
+            this.UserPass.Location = new System.Drawing.Point(219, 128);
+            this.UserPass.Name = "UserPass";
+            this.UserPass.Size = new System.Drawing.Size(171, 20);
+            this.UserPass.TabIndex = 21;
             // 
-            // ProName
+            // UserName
             // 
-            this.ProName.Location = new System.Drawing.Point(219, 80);
-            this.ProName.Name = "ProName";
-            this.ProName.Size = new System.Drawing.Size(171, 20);
-            this.ProName.TabIndex = 20;
+            this.UserName.Location = new System.Drawing.Point(219, 80);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(171, 20);
+            this.UserName.TabIndex = 20;
             // 
             // SignUp
             // 
@@ -134,8 +134,8 @@
             this.Controls.Add(this.btn_sign);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ProPrice);
-            this.Controls.Add(this.ProName);
+            this.Controls.Add(this.UserPass);
+            this.Controls.Add(this.UserName);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignUp";
@@ -157,8 +157,8 @@
         private System.Windows.Forms.Button btn_sign;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox ProPrice;
-        private System.Windows.Forms.TextBox ProName;
+        private System.Windows.Forms.TextBox UserPass;
+        private System.Windows.Forms.TextBox UserName;
         private System.Windows.Forms.Label label3;
 
     }

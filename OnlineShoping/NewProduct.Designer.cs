@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewProduct));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ProPrice = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.ProImg = new System.Windows.Forms.PictureBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,12 +41,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.ProPrice = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProPrice)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,7 +52,6 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.ProPrice);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.ProImg);
             this.panel1.Controls.Add(this.btnCreate);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -66,6 +63,13 @@
             this.panel1.Size = new System.Drawing.Size(446, 410);
             this.panel1.TabIndex = 0;
             // 
+            // ProPrice
+            // 
+            this.ProPrice.Location = new System.Drawing.Point(194, 95);
+            this.ProPrice.Name = "ProPrice";
+            this.ProPrice.Size = new System.Drawing.Size(230, 20);
+            this.ProPrice.TabIndex = 14;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -76,14 +80,6 @@
             this.label5.Size = new System.Drawing.Size(148, 20);
             this.label5.TabIndex = 13;
             this.label5.Text = "Product Image : ";
-            // 
-            // ProImg
-            // 
-            this.ProImg.Location = new System.Drawing.Point(194, 251);
-            this.ProImg.Name = "ProImg";
-            this.ProImg.Size = new System.Drawing.Size(132, 79);
-            this.ProImg.TabIndex = 12;
-            this.ProImg.TabStop = false;
             // 
             // btnCreate
             // 
@@ -180,13 +176,6 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Create New Product";
             // 
-            // ProPrice
-            // 
-            this.ProPrice.Location = new System.Drawing.Point(194, 95);
-            this.ProPrice.Name = "ProPrice";
-            this.ProPrice.Size = new System.Drawing.Size(230, 20);
-            this.ProPrice.TabIndex = 14;
-            // 
             // NewProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,13 +187,13 @@
             this.Name = "NewProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewProduct";
+            this.Load += new System.EventHandler(this.NewProduct_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProPrice)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProPrice)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,7 +211,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox ProImg;
         private System.Windows.Forms.NumericUpDown ProPrice;
     }
 }

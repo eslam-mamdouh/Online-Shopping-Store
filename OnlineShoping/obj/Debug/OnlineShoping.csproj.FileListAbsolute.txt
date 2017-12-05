@@ -15,4 +15,5 @@ C:\Users\Eslam\Documents\Visual Studio 2013\Projects\OnlineShoping\OnlineShoping
 C:\Users\Eslam\Documents\Visual Studio 2013\Projects\OnlineShoping\OnlineShoping\obj\Debug\OnlineShoping.SignUp.resources
 C:\Users\Eslam\documents\visual studio 2013\Projects\OnlineShoping\OnlineShoping\obj\Debug\OnlineShoping.UserByAdmin.resources
 C:\Users\Eslam\documents\visual studio 2013\Projects\OnlineShoping\OnlineShoping\obj\Debug\OnlineShoping.ProductContainer.resources
+C:\Users\Eslam\Documents\Visual Studio 2013\Projects\OnlineShoping\OnlineShoping\obj\Debug\OnlineShoping.MainContainer.resources
 C:\Users\Eslam\Documents\Visual Studio 2013\Projects\OnlineShoping\OnlineShoping\obj\Debug\OnlineShoping.csprojResolveAssemblyReference.cache

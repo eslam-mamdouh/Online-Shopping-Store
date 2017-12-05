@@ -19,16 +19,21 @@ namespace OnlineShoping
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             Form1 main = new Form1();
             main.Show();
         }
 
         private void NewPro_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             NewProduct newPro = new NewProduct();
             newPro.Show();
+        }
+
+        private void ProductsManagement_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
