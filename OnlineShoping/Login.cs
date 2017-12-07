@@ -48,21 +48,27 @@ namespace OnlineShoping
 
         public void btn_login_Click(object sender, EventArgs e)
         {
-            if(UserName.Text ==NewUser.name  && Password.Text == NewUser.password )
+            try
             {
-                this.Hide();
-                Form1 main = new Form1();
-                main.Show();
-            }
-            if (UserName.Text == "1" && Password.Text == "1")
+                if (UserName.Text == NewUser.name && Password.Text == NewUser.password)
+                {
+                    this.Hide();
+                    Form1 main = new Form1();
+                    main.Show();
+                }
+                if (UserName.Text == "1" && Password.Text == "1")
+                {
+                    this.Hide();
+                    Form1 main = new Form1();
+                    main.Show();
+                }
+                else
+                {
+                    MessageBox.Show("UserName or Password is Not Valid !");
+                }
+            }catch(Exception err)
             {
-                this.Hide();
-                Form1 main = new Form1();
-                main.Show();
-            }
-            else
-            {
-                MessageBox.Show("UserName or Password is Not Valid !");
+                MessageBox.Show(err.Message);
             }
             /*SqlConnection myConnection = new SqlConnection("Data Source=DESKTOP-NHUPJV2;Initial Catalog=shopping;");
             string query = "select username , password from users where username='" + UserName.Text + "'and Password='" + Password.Text;

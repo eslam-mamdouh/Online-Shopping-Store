@@ -41,15 +41,20 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.AmountOfPro = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProPrice)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmountOfPro)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.AmountOfPro);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.ProPrice);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.btnCreate);
@@ -65,7 +70,12 @@
             // 
             // ProPrice
             // 
-            this.ProPrice.Location = new System.Drawing.Point(194, 95);
+            this.ProPrice.Location = new System.Drawing.Point(194, 111);
+            this.ProPrice.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.ProPrice.Name = "ProPrice";
             this.ProPrice.Size = new System.Drawing.Size(230, 20);
             this.ProPrice.TabIndex = 14;
@@ -75,7 +85,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(62)))));
-            this.label5.Location = new System.Drawing.Point(46, 279);
+            this.label5.Location = new System.Drawing.Point(46, 295);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(148, 20);
             this.label5.TabIndex = 13;
@@ -101,7 +111,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(62)))));
-            this.label3.Location = new System.Drawing.Point(46, 168);
+            this.label3.Location = new System.Drawing.Point(46, 184);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 20);
             this.label3.TabIndex = 5;
@@ -112,7 +122,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(62)))));
-            this.label2.Location = new System.Drawing.Point(46, 95);
+            this.label2.Location = new System.Drawing.Point(46, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 4;
@@ -123,7 +133,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(62)))));
-            this.label1.Location = new System.Drawing.Point(46, 53);
+            this.label1.Location = new System.Drawing.Point(46, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 20);
             this.label1.TabIndex = 3;
@@ -131,7 +141,7 @@
             // 
             // ProDis
             // 
-            this.ProDis.Location = new System.Drawing.Point(194, 134);
+            this.ProDis.Location = new System.Drawing.Point(194, 150);
             this.ProDis.Multiline = true;
             this.ProDis.Name = "ProDis";
             this.ProDis.Size = new System.Drawing.Size(230, 97);
@@ -139,7 +149,7 @@
             // 
             // ProName
             // 
-            this.ProName.Location = new System.Drawing.Point(194, 53);
+            this.ProName.Location = new System.Drawing.Point(194, 69);
             this.ProName.Name = "ProName";
             this.ProName.Size = new System.Drawing.Size(230, 20);
             this.ProName.TabIndex = 0;
@@ -176,6 +186,29 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Create New Product";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(42)))), ((int)(((byte)(62)))));
+            this.label7.Location = new System.Drawing.Point(46, 29);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 20);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Amount : ";
+            // 
+            // AmountOfPro
+            // 
+            this.AmountOfPro.Location = new System.Drawing.Point(194, 29);
+            this.AmountOfPro.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.AmountOfPro.Name = "AmountOfPro";
+            this.AmountOfPro.Size = new System.Drawing.Size(230, 20);
+            this.AmountOfPro.TabIndex = 16;
+            // 
             // NewProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,6 +227,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmountOfPro)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,5 +246,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown ProPrice;
+        private System.Windows.Forms.NumericUpDown AmountOfPro;
+        private System.Windows.Forms.Label label7;
     }
 }

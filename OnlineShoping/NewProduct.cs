@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace OnlineShoping
 {
     public partial class NewProduct : Form
     {
         LinkedList<ProductContainer> StoragePro = new LinkedList<ProductContainer>();
-
+        DataSet ds = new DataSet();
         
         public NewProduct()
         {
@@ -28,32 +29,45 @@ namespace OnlineShoping
            // ProductsManagement newMang = new ProductsManagement();
             //newMang.Show();
         }
-
+        
         private void btnCreate_Click(object sender, EventArgs e)
         {
             try
             {
-                
-                ProductContainer NPro = new ProductContainer();
-                NPro.name = ProName.Text;
-                NPro.disc = ProDis.Text;
-                NPro.price = ProPrice.Value;
-                if (StoragePro.Count == 0)
-                {
+               
+                DataTable dt = new DataTable();
+                dt.Columns.Add(new DataColumn("Product_Name", Type.GetType("System.String")));
+                dt.Columns.Add(new DataColumn("Product_Disc", Type.GetType("System.String")));
+                dt.Columns.Add(new DataColumn("product_Price", Type.GetType("System.Int32")));
+                ds.Tables.Add(dt);
+                ds.Tables[0].TableName = "products";
 
-                    StoragePro.AddFirst(NPro);
-                    MessageBox.Show("Product Created Successfully ");
-                }
-
-                else
+                int count=0;
+                while (count < AmountOfPro.Value)
                 {
-                    
+                    ProductContainer NPro = new ProductContainer();
+                    NPro.name = ProName.Text;
+                    NPro.disc = ProDis.Text;
+                    NPro.price = ProPrice.Value; 
                     StoragePro.AddLast(NPro);
-                    MessageBox.Show("Product Created Successfully ");
-                    
+
+                    count++;
+
                 }
 
+                foreach (var pro in StoragePro)
+                {
+                    DataRow dr;
+                    dr = dt.NewRow();
+                    dr["Product_Name"] = pro.name;
+                    dr["Product_Disc"] = pro.disc;
+                    dr["product_Price"] = pro.price;
+                    dt.Rows.Add(dr);
+                    ds.WriteXml("Products.xml");
 
+                }
+
+                MessageBox.Show("Product Created Successfully ");
             }
             catch (Exception exc)
             {

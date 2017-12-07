@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
+using System.Xml;
 
 namespace OnlineShoping
 {
@@ -19,6 +21,8 @@ namespace OnlineShoping
         public Form1()
         {
             InitializeComponent();
+
+           
             /*ProductContainer pro1 = new ProductContainer();
             pro1.name = "Eslam";
             pro1.price = 530;
@@ -51,22 +55,22 @@ namespace OnlineShoping
             }*/
       
         }
-       
+
 
         public Form1(LinkedList<ProductContainer> StoragePro)
         {
             InitializeComponent();
-            this.StoragePro = StoragePro;
-            var current = StoragePro.First;
-            while(current != null)
-            {
-                ProductContainer pro = new ProductContainer();
-                pro.name = current.Value.name;
-                pro.disc = current.Value.disc;
-                pro.price = current.Value.price;
-                flowLayoutPanel1.Controls.Add(pro);
-                current = current.Next;
-            }
+            //this.StoragePro = StoragePro;
+            //var current = StoragePro.First;
+            //while(current != null)
+            //{
+            //    ProductContainer pro = new ProductContainer();
+            //    pro.name = current.Value.name;
+            //    pro.disc = current.Value.disc;
+            //    pro.price = current.Value.price;
+            //    flowLayoutPanel1.Controls.Add(pro);
+            //    current = current.Next;
+            //}
         }
         //ProductContainer Npro = new ProductContainer();
         public Form1(ProductContainer NPro)
@@ -80,6 +84,52 @@ namespace OnlineShoping
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            try
+            {
+
+                StoragePro = new LinkedList<ProductContainer>();
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load("products.xml");
+                XmlNodeList nodes = xmlDoc.DocumentElement.ChildNodes;
+                foreach (XmlNode node in nodes)
+                {
+                    ProductContainer pro = new ProductContainer();
+                    pro.name = node["Product_Name"].InnerText;
+                    pro.disc = node["Product_Disc"].InnerText;
+                    //pro.price = node["product_Price"].InnerXml;
+                    StoragePro.AddLast(pro);
+
+                }
+                foreach (ProductContainer p in StoragePro)
+                {
+                    ProductContainer pro = new ProductContainer();
+                    pro.name = p.name;
+                    pro.disc = p.disc;
+                    pro.price = 200;
+                    flowLayoutPanel1.Controls.Add(pro);
+
+                }
+            }catch(Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
+            //LinkedList<object> Link = new LinkedList<object>();
+            //NewProductClass P = new NewProductClass();
+            //P.name = "Mobile";
+            //File.AppendAllText("File.txt", P.name);
+            //P.price = 2000;
+            //File.AppendAllText("File.txt", P.price.ToString());
+            //P.disc = "Eslam mamdouh mohamed";
+            //File.AppendAllText("File.txt", P.disc);
+            ////Link.AddLast(P);
+            ////object[] data = Link.ToArray();
+            //////string data = P.ToString();
+            ////File.WriteAllText("File.txt", data.ToString());
+            //test.Text = File.ReadAllText("File.txt");
+            
+            
+
+            
 
 
         }
@@ -173,6 +223,8 @@ namespace OnlineShoping
         {
 
         }
+
+     
 
        
     }
